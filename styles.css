@@ -1,0 +1,215 @@
+/* Base Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    background-color: #121212;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+body.dark-mode header, 
+body.dark-mode nav, 
+body.dark-mode section, 
+body.dark-mode footer {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #1b1b1b, #333);
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Less intense glow */
+    animation: glowPulse 2s infinite ease-in-out;
+}
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    }
+}
+header p {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #1b1b1b, #333);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    margin: 0 0.5em;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+nav a:hover {
+    background: #444;
+    color: #ddd;
+}
+nav a.active {
+    background: #555;
+    color: #fff;
+}
+
+/* Main Section */
+section {
+    padding: 3em 2em;
+    max-width: 1000px;
+    margin: 3em auto; 
+    background: #1b1b1b;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ecf0f1;
+    position: relative;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #333;
+}
+
+/* Box Styles */
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Add spacing between boxes */
+}
+.box {
+    background: #2c2c2c;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaming Section */
+#gaming {
+    background: #1b1b1b;
+    padding: 3em 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    margin-bottom: 3em;
+}
+#gaming h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ecf0f1;
+    position: relative;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #333;
+}
+#gaming p {
+    font-size: 1.2em;
+    color: #bdc3c7;
+}
+.game-list {
+    margin-top: 1em;
+    padding-left: 1em;
+}
+.game-list li {
+    margin-bottom: 0.5em;
+}
+
+/* Graphic Design Section */
+#graphic-design {
+    background: #1b1b1b;
+    padding: 3em 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    margin-bottom: 3em;
+}
+#graphic-design h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ecf0f1;
+    position: relative;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #333;
+}
+#graphic-design p {
+    font-size: 1.2em;
+    color: #bdc3c7;
+}
+.design-list {
+    margin-top: 1em;
+    padding-left: 1em;
+}
+.design-list li {
+    margin-bottom: 0.5em;
+}
+
+/* Footer */
+footer {
+    background: #1b1b1b;
+    color: #ccc;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Section Highlight */
+section.active {
+    border: 2px solid #ecf0f1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: #2c2c2c;
+}
